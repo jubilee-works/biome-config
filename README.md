@@ -5,18 +5,19 @@
 ### 1. Install the Configuration File
 
 Refer to https://jsr.io/@timetree/biome-config for installation instructions.
-For example, using pnpm: pnpm dlx jsr add @timetree/biome-config
+For example, using pnpm: `pnpm dlx jsr add @timetree/biome-config`
 
 ### 2. Extend biome.json
 
 In the biome.json file of each project, add the following:
-json
+```json
 {
   "extends": [
       "./node_modules/@timetree/biome-config/biome.json"
   ],
   ...
 }
+```
 
 ### 3. Override Settings According to the Project
 
