@@ -1,11 +1,12 @@
 name: Publish to jsr
 
 on:
-  # - push
-  - pull_request
+  - push:
+    branches:
+      - main
 
 jobs:
-  test:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
