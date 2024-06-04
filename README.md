@@ -1,5 +1,7 @@
 # Common Settings for TimeTree's Biome
 
+[![JSR](https://jsr.io/badges/@timetree/biome-config)](https://jsr.io/@timetree/biome-config)
+
 ## Installation Steps
 
 ### 1. Install the Configuration File
@@ -23,7 +25,3 @@ In the biome.json file of each project, add the following:
 
 For information on how to set overrides, refer to:
 https://biomejs.dev/ja/reference/configuration/#overrides
-
-## List of Links
-
-https://jsr.io/@timetree/biome-config
