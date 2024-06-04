@@ -1,0 +1,47 @@
+name: Version Sync (Push)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync_version:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get current version from deno.json
+        run: |
+          echo "CURRENT_VERSION=$(jq --raw-output .version deno.json)" >> $GITHUB_ENV
+      - name: Get next version from release-drafter
+        id: drafter
+        uses: release-drafter/release-drafter@v6
+        with:
+          commitish: main
+          disable-autolabeler: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify next version
+        run: |
+          NEXT_VERSION=${{ steps.drafter.outputs.resolved_version }}
+          if [ ${#NEXT_VERSION} -lt 5 ]; then
+            exit 1
+          fi
+          echo NEXT_VERSION=$(echo $NEXT_VERSION) >> $GITHUB_ENV
+      - name: Prepare to use formatter
+        if: env.CURRENT_VERSION != env.NEXT_VERSION
+        uses: oven-sh/setup-bun@v1
+
+      - name: Sync version
+        if: env.CURRENT_VERSION != env.NEXT_VERSION
+        run: |
+          echo $(jq ".version=\"${{ env.NEXT_VERSION }}\"" deno.json) > deno.json
+          bunx @biomejs/biome format --write deno.json
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add deno.json
+          git commit -m "chore(deno): bump version to ${{ steps.drafter.outputs.resolved_version }}"
+          git push origin HEAD:main
