@@ -1,31 +1,28 @@
-# TimeTreeのBiomeの共通設定
+# Common Settings for TimeTree's Biome
 
-## 導入手順
+## Installation Steps
 
-### 1. 設定ファイルをインストールする
+### 1. Install the Configuration File
 
-https://jsr.io/@timetree/biome-config を参考にインストールする
+Refer to https://jsr.io/@timetree/biome-config for installation instructions.
+For example, using pnpm: pnpm dlx jsr add @timetree/biome-config
 
-ex) pnpmの場合 `pnpm dlx jsr add @timetree/biome-config`
+### 2. Extend biome.json
 
-### 2. `biome.json`をextendsする
-
-各PJの`biome.json`に以下のように記述する
-
-```json
+In the biome.json file of each project, add the following:
+json
 {
   "extends": [
       "./node_modules/@timetree/biome-config/biome.json"
   ],
   ...
 }
-```
 
-### 3. PJに合わせて設定をoverridesする
+### 3. Override Settings According to the Project
 
-> overridesの設定方法は以下を参考
-> https://biomejs.dev/ja/reference/configuration/#overrides
+For information on how to set overrides, refer to:
+https://biomejs.dev/ja/reference/configuration/#overrides
 
-## リンク一覧
+## List of Links
 
-- https://jsr.io/@timetree/biome-config
+https://jsr.io/@timetree/biome-config
