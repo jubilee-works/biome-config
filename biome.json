@@ -17,16 +17,7 @@
       },
       "complexity": {
         "noExcessiveCognitiveComplexity": "warn",
-        "noVoid": "error",
         "useSimplifiedLogicExpression": "off"
-      },
-      "correctness": {
-        "noNewSymbol": "error",
-        "noUndeclaredVariables": "error",
-        "noUnusedImports": "error",
-        "noUnusedPrivateClassMembers": "error",
-        "noUnusedVariables": "error",
-        "useHookAtTopLevel": "error"
       },
       "performance": {
         "noBarrelFile": "off",
@@ -35,53 +26,19 @@
       "style": {
         "noDefaultExport": "off",
         "noImplicitBoolean": "off",
-        "noNamespace": "error",
-        "noNamespaceImport": "error",
-        "noNegationElse": "error",
-        "noParameterProperties": "error",
-        "noRestrictedGlobals": "error",
-        "noShoutyConstants": "error",
         "noUselessElse": "warn",
-        "useBlockStatements": "off",
-        "useCollapsedElseIf": "error",
-        "useConsistentArrayType": "error",
         "useFilenamingConvention": "off",
-        "useForOf": "error",
-        "useFragmentSyntax": "error",
         "useNamingConvention": {
           "level": "error",
           "options": {
             "strictCase": false
           }
-        },
-        "useNodeAssertStrict": "error",
-        "useShorthandArrayType": "error",
-        "useShorthandAssign": "error",
-        "useSingleCaseStatement": "error"
+        }
       },
       "suspicious": {
         "noArrayIndexKey": "off",
         "noConsoleLog": "warn",
-        "noControlCharactersInRegex": "error",
-        "noEmptyBlockStatements": "error",
-        "noSkippedTests": "warn",
-        "noShadowRestrictedNames": "error",
-        "useAwait": "error"
-      },
-      "nursery": {
-        "noConsole": "off",
-        "noDoneCallback": "off",
-        "noDuplicateElseIf": "off",
-        "noDuplicateJsonKeys": "off",
-        "noReactSpecificProps": "off",
-        "noRestrictedImports": "off",
-        "noUndeclaredDependencies": "off",
-        "noUselessUndefinedInitialization": "off",
-        "useConsistentBuiltinInstantiation": "off",
-        "useDefaultSwitchClause": "off",
-        "useExplicitLengthCheck": "off",
-        "useImportRestrictions": "off",
-        "useSortedClasses": "off"
+        "noSkippedTests": "warn"
       }
     }
   },
