@@ -70,18 +70,13 @@
       },
       "nursery": {
         "noConsole": "off",
-        "noConstantMathMinMaxClamp": "off",
         "noDoneCallback": "off",
         "noDuplicateElseIf": "off",
         "noDuplicateJsonKeys": "off",
-        "noEvolvingAny": "off",
-        "noFlatMapIdentity": "off",
-        "noNodejsModules": "off",
         "noReactSpecificProps": "off",
         "noRestrictedImports": "off",
         "noUndeclaredDependencies": "off",
         "noUselessUndefinedInitialization": "off",
-        "useArrayLiterals": "off",
         "useConsistentBuiltinInstantiation": "off",
         "useDefaultSwitchClause": "off",
         "useExplicitLengthCheck": "off",
@@ -107,7 +102,7 @@
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
       "semicolons": "always",
-      "trailingComma": "all"
+      "trailingCommas": "all"
     }
   },
   "json": {
