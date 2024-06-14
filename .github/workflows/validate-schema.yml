@@ -17,5 +17,7 @@ jobs:
           deno-version: v${{ steps.deno-version.outputs.deno-version }}
       - name: Cache dependencies
         run: deno cache validate-schema.ts
+      - name: Check validation script
+        run: deno check validate-schema.ts
       - name: Validate schema
         run: deno run --allow-net validate-schema.ts
