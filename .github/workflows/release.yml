@@ -1,4 +1,4 @@
-name: Publish to jsr
+name: Publish to jsr (Release Published)
 
 on:
   release:
