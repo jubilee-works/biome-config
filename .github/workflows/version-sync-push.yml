@@ -1,4 +1,4 @@
-name: Version Sync (Push)
+name: Version Sync (Push to main)
 
 on:
   push:

@@ -1,0 +1,23 @@
+name: Validate Biome Schema (Pull Request)
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get deno version
+        id: deno-version
+        run: echo deno-version=`cat .tool-versions | grep deno | sed -e "s/deno //"` >> $GITHUB_OUTPUT
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v${{ steps.deno-version.outputs.deno-version }}
+      - name: Cache dependencies
+        run: deno cache validate-schema.ts
+      - name: Check validation script
+        run: deno check validate-schema.ts
+      - name: Validate schema
+        run: deno run --allow-net validate-schema.ts
