@@ -1,4 +1,4 @@
-import Ajv from "https://esm.sh/ajv@8.16.0";
+import Ajv from "https://esm.sh/ajv@8.12.0";
 import addFormats from "https://esm.sh/ajv-formats@3.0.1";
 import data from "./biome.json" with { type: "json" };
 
@@ -9,7 +9,7 @@ const ajv = new Ajv({ strict: false });
 addFormats(ajv);
 
 ajv.addFormat("uint8", {
-  type: "integer",
+  type: "number",
   validate: (data: unknown) =>
     typeof data === "number" &&
     Number.isInteger(data) &&
@@ -43,4 +43,5 @@ if (valid) {
   console.info("Data is valid!");
 } else {
   console.error("Data is invalid:", validate.errors);
+  Deno.exit(1);
 }

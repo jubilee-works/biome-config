@@ -2,6 +2,7 @@
   "version": "3",
   "remote": {
     "https://esm.sh/ajv-formats@3.0.1": "fb52a371c6987577eebbe786e1375e1c0b290b1e95de2a4b40bab6123e9a8c56",
+    "https://esm.sh/ajv@8.12.0": "965ce16eff0cefef99e67478c5ee760928bd8931d40c3b958325cdd6ab6149f2",
     "https://esm.sh/ajv@8.16.0": "709928db8afb11f18540a0f7be22b0600017ad51a326f8f06d1bd989285320ea",
     "https://esm.sh/v135/ajv-formats@3.0.1/denonext/ajv-formats.mjs": "8edbd78b344ad19468e5cb43b5b2eef05600b5d6dfadf0967fa8969dbd6212d6",
     "https://esm.sh/v135/ajv@8.12.0/denonext/ajv.mjs": "4645df9093d0f8be0e964070a4a7aea8adea06e8883660340931f7a3f979fc65",
