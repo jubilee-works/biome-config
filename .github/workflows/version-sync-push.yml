@@ -33,7 +33,7 @@ jobs:
           echo NEXT_VERSION=$(echo $NEXT_VERSION) >> $GITHUB_ENV
       - name: Prepare to use formatter
         if: env.CURRENT_VERSION != env.NEXT_VERSION
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
 
       - name: Sync version
         if: env.CURRENT_VERSION != env.NEXT_VERSION
