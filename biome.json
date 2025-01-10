@@ -19,6 +19,9 @@
         "noExcessiveCognitiveComplexity": "warn",
         "useSimplifiedLogicExpression": "off"
       },
+      "correctness": {
+        "useHookAtTopLevel": "error"
+      },
       "performance": {
         "noBarrelFile": "off",
         "noReExportAll": "off"
