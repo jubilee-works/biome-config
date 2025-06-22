@@ -8,15 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Get deno version
-        id: deno-version
-        run: echo deno-version=`cat .tool-versions | grep deno | sed -e "s/deno //"` >> $GITHUB_OUTPUT
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v${{ steps.deno-version.outputs.deno-version }}
-      - name: Cache dependencies
-        run: deno cache validate-schema.ts
+          deno-version-file: .tool-versions
+          cache: true
       - name: Check validation script
         run: deno check validate-schema.ts
       - name: Validate schema
