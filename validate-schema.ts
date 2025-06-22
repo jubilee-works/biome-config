@@ -1,5 +1,5 @@
-import addFormats from "https://esm.sh/ajv-formats@3.0.1";
-import Ajv from "https://esm.sh/ajv@8.12.0";
+import addFormats from "npm:ajv-formats-draft2019";
+import { Ajv } from "npm:ajv";
 import data from "./biome.json" with { type: "json" };
 
 const response = await fetch(data.$schema);
