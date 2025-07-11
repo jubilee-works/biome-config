@@ -49,6 +49,7 @@
         "noArrayIndexKey": "off",
         "noConsole": {
           "level": "warn",
+          "fix": "none",
           "options": {
             "allow": [
               "assert",
