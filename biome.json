@@ -85,7 +85,7 @@
         "noSkippedTests": "warn"
       },
       "nursery": {
-        "noNestedComponentDefinitions": "off"
+        "useConsistentObjectDefinition": "error"
       }
     }
   },
