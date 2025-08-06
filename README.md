@@ -29,3 +29,9 @@ In the biome.json file of each project, add the following:
 
 For information on how to set overrides, refer to:
 https://biomejs.dev/ja/reference/configuration/#overrides
+
+## Steps to Publish
+
+1. Navigate to the [release page](https://github.com/jubilee-works/biome-config/releases).
+2. Edit the latest pre-release and change its status to "publish."
+3. It will be published on JSR.
