@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Get current version from deno.json
         run: |
           echo "CURRENT_VERSION=$(jq --raw-output .version deno.json)" >> $GITHUB_ENV
