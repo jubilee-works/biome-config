@@ -83,9 +83,6 @@
           }
         },
         "noSkippedTests": "warn"
-      },
-      "nursery": {
-        "useConsistentObjectDefinition": "error"
       }
     }
   },
