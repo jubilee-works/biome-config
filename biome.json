@@ -24,7 +24,8 @@
         "useSimplifiedLogicExpression": "off"
       },
       "correctness": {
-        "useHookAtTopLevel": "error"
+        "useHookAtTopLevel": "error",
+        "noNestedComponentDefinitions": "error"
       },
       "performance": {
         "noBarrelFile": "off",
