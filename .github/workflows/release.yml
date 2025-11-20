@@ -12,7 +12,7 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Get deno version
         id: deno-version
         run: echo deno-version=`cat .tool-versions | grep deno | sed -e "s/deno //"` >> $GITHUB_OUTPUT
