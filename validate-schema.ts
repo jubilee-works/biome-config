@@ -5,7 +5,7 @@ import data from "./biome.json" with { type: "json" };
 const response = await fetch(data.$schema);
 const schema = await response.json();
 
-const ajv = new Ajv({ strict: false });
+const ajv = new Ajv({ strict: false, validateSchema: false });
 addFormats(ajv);
 
 const isUintN = (n: number) => (data: unknown) =>
