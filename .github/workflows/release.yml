@@ -16,7 +16,7 @@ jobs:
       - name: Get deno version
         id: deno-version
         run: echo deno-version=`cat .tool-versions | grep deno | sed -e "s/deno //"` >> $GITHUB_OUTPUT
-      - uses: denoland/setup-deno@v1
+      - uses: denoland/setup-deno@11b63cf76cfcafb4e43f97b6cad24d8e8438f62d # v1.5.2
         with:
           deno-version: v${{ steps.deno-version.outputs.deno-version }}
       - run: deno publish
