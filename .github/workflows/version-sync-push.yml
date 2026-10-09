@@ -18,7 +18,7 @@ jobs:
           echo "CURRENT_VERSION=$(jq --raw-output .version deno.json)" >> $GITHUB_ENV
       - name: Get next version from release-drafter
         id: drafter
-        uses: release-drafter/release-drafter@c345907820e0396f6f44bcfd9ac4763325f8feb0 # v7.8.0
+        uses: release-drafter/release-drafter@72967cdc98ddd3160f1fc3dff619de365e137dd0 # v7.9.0
         with:
           commitish: main
           disable-autolabeler: true
